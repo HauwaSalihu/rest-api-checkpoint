@@ -3,7 +3,7 @@ import express from "express";
 //in other to use the router function to define your routes
 
 const router = express.Router();
-//importing register user from register.js in other to use the register user function
+//importing add user from adduser.js in other to use the create a user function
 import addUser from "../controllers/addUser.js";
 //importing update user from updateuser.js in other to use the update user function
 import updateUser from "../controllers/editUser.js";
@@ -15,7 +15,7 @@ import getUserDetails from "../controllers/getUser.js";
 router.get("/user", getUserDetails);
 router.post("/create", addUser);
 //the update user route takes /:userId
-//in other for the request to obtain a user id  from itsroute
+//in other for the request to obtain a user id  from it sroute
 router.put("/update-user/:userId", updateUser);
 
 router.delete("/delete-user/:userId", deleteUser);
